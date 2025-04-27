@@ -38,7 +38,21 @@ def calculate(opera: str, *args: float) ->float:
              return args[0] /args[1]
         except ZeroDivisionError as e:
             print("Got an error -->ZeroDivisionError")
-    #if opera=='add':
-print (calculate('div',10,0))
+    if opera=='add': 
+        return args[0] + args[1]
+    if opera=='mul':
+        return args[0] * args[1]
+    if opera=='sub':
+        return args[0] - args[1]
+st=input("Enter the operation:")    
+num1=float(input("Enter the first number:"))
+num2=float(input("Enter the Second number:"))
+#print (calculate('add',10,5))
+"""
+another calling
+print(f"the result {st} the numbers {num1} and {num2} is: {calculate(st,num1,num2)}" )
+"""
+args=[num1,num2]
+print(f"the result {st} the numbers {num1} and {num2} is: {calculate(st,*args)}" )
 
 
